@@ -1,0 +1,19 @@
+syntax = "proto3";
+package Proto;
+
+option go_package = "github.com/MieMilvang/DISYS_gRPC_Eample;DISYS_gRPC_Eample";
+
+service Service{
+
+    rpc Increment(IncrementValue) returns (return){}
+
+}
+
+message IncrementValue{
+    int32 value = 1;
+    int32 clientid = 2;
+}
+
+message return{
+    int32 IncrementedValue = 1;
+}
